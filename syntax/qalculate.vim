@@ -43,7 +43,7 @@ syntax match qalcNumber '\<\d\+\>'
 syntax match qalcNumber '\<\d\+[i]\>'
 syntax match qalcNumber '\<\d\+[eE][+-]\=\d\+[i]\=\>'
 
-syntax match qalcFunction	'\v\w+(\()@='
+syntax match qalcFunction '\v\w+(\()@='
 
 syntax keyword qalcStatement to
 
@@ -54,7 +54,7 @@ highlight link qalcNumber Number
 highlight link qalcFunction Function
 highlight link qalcStatement  Keyword
 
-let b:current_syntax = "qalculate"
+let b:current_syntax = 'qalculate'
 
 let &cpo = s:cpo_save
 unlet s:cpo_save
