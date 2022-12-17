@@ -8,7 +8,7 @@ set cpo&vim
 syntax match qalcComment '#.*$' contains=@Spell
 
 syntax match qalcOperator '+'
-syntax match qalcOperator '-'
+syntax match qalcOperator '\v-([^>])@='
 syntax match qalcOperator '\*'
 syntax match qalcOperator '/'
 syntax match qalcOperator '\\'
@@ -23,7 +23,7 @@ syntax match qalcOperator '&'
 syntax match qalcOperator '|'
 syntax match qalcOperator '='
 syntax match qalcOperator '<'
-syntax match qalcOperator '>'
+syntax match qalcOperator '\v([^-])@=>'
 syntax match qalcOperator '√'
 syntax match qalcOperator '∛'
 syntax match qalcOperator '∜'
@@ -45,7 +45,9 @@ syntax match qalcNumber '\<\d\+[eE][+-]\=\d\+[i]\=\>'
 
 syntax match qalcFunction '\v\w+(\()@='
 
-syntax keyword qalcStatement to
+syntax keyword qalcStatement to →
+syntax match qalcStatement '->'
+syntax match qalcStatement '→'
 
 highlight link qalcComment Comment
 highlight link qalcOperator Operator
