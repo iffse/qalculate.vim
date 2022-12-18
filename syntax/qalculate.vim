@@ -39,7 +39,7 @@ syntax match qalcDelimiter '}'
 
 syntax match qalcNumber '\<0[xX]\x\+\>'
 syntax match qalcNumber '\<0[bB][01]\+\>'
-syntax match qalcNumber '\<\d\+\>'
+syntax match qalcNumber '\<\d*'
 syntax match qalcNumber '\<\d\+[i]\>'
 syntax match qalcNumber '\<\d\+[eE][+-]\=\d\+[i]\=\>'
 
